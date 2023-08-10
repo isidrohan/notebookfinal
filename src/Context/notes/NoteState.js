@@ -7,7 +7,8 @@ const NoteState = ({children}) =>{
 
       // GET ALL NOTES a note 
       const getNotes = async()=>{
-        const response = await fetch(`${host}/api/notes/fetchallnotes`, {
+        // const response = await fetch(`${host}/api/notes/fetchallnotes`, {
+        const response = await fetch(`https://backendnotebook.onrender.com`, {
           method: "GET", 
           headers: {
             "Content-Type": "application/json",
@@ -22,7 +23,8 @@ const NoteState = ({children}) =>{
 
       // ADD a note 
       const addNote = async(title,description,tag)=>{
-        const response = await fetch(`${host}/api/notes/addnote`, {
+        // const response = await fetch(`${host}/api/notes/addnote`, {
+        const response = await fetch(`https://backendnotebook.onrender.com`, {
           method: "POST", 
           headers: {
             "Content-Type": "application/json",
@@ -36,7 +38,8 @@ const NoteState = ({children}) =>{
 
       // DELETE a Note 
       const deleteNote = async(id)=>{
-          const response = await fetch(`${host}/api/notes/deletenote/${id}`, {
+          // const response = await fetch(`${host}/api/notes/deletenote/${id}`, {
+          const response = await fetch(`https://backendnotebook.onrender.com`, {
             method: "DELETE", 
             headers: {
               "Content-Type": "application/json",
@@ -56,7 +59,8 @@ const NoteState = ({children}) =>{
 
       // EDIT a note
       const editNote = async(id,title,description,tag)=>{
-        const response = await fetch(`${host}/api/notes/updatenote/${id}`, {
+        // const response = await fetch(`${host}/api/notes/updatenote/${id}`, {
+        const response = await fetch(`https://backendnotebook.onrender.com`, {
           method: "PUT", 
           headers: {
             "Content-Type": "application/json",

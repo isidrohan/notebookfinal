@@ -16,7 +16,8 @@ const Signup = () => {
   const {name,email,password,cpassword} = credential;
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch("http://localhost:5000/api/auth/create", {
+    // const response = await fetch("http://localhost:5000/api/auth/create", {
+    const response = await fetch("https://backendnotebook.onrender.com", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
